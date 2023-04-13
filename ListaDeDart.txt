@@ -1,0 +1,77 @@
+Marcos Vinícius Júnior da Silva
+
+1)import 'dart:math';
+void main() {
+  double x1 = 3.0; //declarar coordenadas
+  double y1 = 4.0;
+  double x2 = 7.0;
+  double y2 = 9.0;
+  double distancia = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));//calculo
+  print('A distância entre os pontos P1($x1,$y1) e P2($x2,$y2) é: $distancia'); //impressao dos resultados
+}
+
+2)import 'dart:io';
+void main() {
+print('Digite um numero:');
+  var a = double.parse(stdin.readLineSync()!);//pedir valores para o usuario
+  print('Digite um segundo numero:');
+  var b = double.parse(stdin.readLineSync()!);
+  print('Digite um terceiro numero:');
+  var c = double.parse(stdin.readLineSync()!);
+  var r = (a+b)*(a+b);//calculos
+  var s= (b+c)*(b+c);
+  var d= (r+s)/2;
+  print('Resultado: $d'); //impressao do resultado
+}
+
+3)import 'dart:io';
+void main() {
+  stdout.write('Digite o tempo de duração do evento em segundos:');//pedir variavel para o usuario
+  int ds= int.parse(stdin.readLineSync()!);
+  int h= ds ~/3600;
+  int m= (ds%3600)~/60;
+  int s=ds%60;
+  print('O evento durou $h horas, $m minutos e $s segundos.');//imprimir resultado
+}
+
+4)import 'dart:io';
+void main() {
+ print('Digite a primeira nota:'); //pedir valores para o usuario
+  var nota1 = double.parse(stdin.readLineSync()!);
+  print('Digite a segunda nota:');
+  var nota2 = double.parse(stdin.readLineSync()!);
+  print('Digite a terceira nota:');
+  var nota3 = double.parse(stdin.readLineSync()!);
+  var media = (nota1 * 2 + nota2 * 3 + nota3 * 5) / 10;//media ponderada
+  print('A média final do aluno é: $media');//imprimir media
+}
+
+5)import 'dart:io';
+void main(){
+  double custoFabrica; //declarar variaveis
+  double custoDistribuidor;
+  double custoImpostos;
+  double custoConsumidor;
+  print("Digite o custo de fábrica do carro: "); //pedir os valores pro usuario
+  custoFabrica = double.parse(stdin.readLineSync()!);
+  custoDistribuidor=custoFabrica*(28/100);
+  custoImpostos=custoFabrica*(45/100);
+  custoConsumidor=custoFabrica+custoDistribuidor+custoImpostos;
+  print("O custo é: \$$custoConsumidor"); //exibir resultados
+}
+
+
+6)import 'dart:io';
+void main() {
+  print("Digite os valores dos coeficientes a, b, c, d, e e f: "); //usuario vai digitar os valores o 
+  double a=double.parse(stdin.readLineSync()!);
+  double b=double.parse(stdin.readLineSync()!);
+  double c=double.parse(stdin.readLineSync()!);
+  double d=double.parse(stdin.readLineSync()!);
+  double e=double.parse(stdin.readLineSync()!);
+  double f=double.parse(stdin.readLineSync()!);
+  double x =((c*e-b*f)/(a*e-b*d)); //calculo dos valores
+  double y =((a*f-c*d)/(a*e-b*d));
+  print("O valor de x é: $x");//Exibir resultados
+  print("O valor de y é: $y");
+}
